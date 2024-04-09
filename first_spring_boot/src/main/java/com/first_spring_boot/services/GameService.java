@@ -19,6 +19,23 @@ public class GameService {
     public Game getGameById(Integer id) {
         return gameRepository.findById(id).orElse(null);
     }
-    
-    
+    public Game addGame(Game game) {
+        return gameRepository.save(game);
+    }
+
+    public Game updateGame(Integer gameId, Game updatedGame) {
+        if (!gameRepository.existsById(gameId)) {
+            return null;
+        }
+        Game existingGame = gameRepository.getOne(gameId);
+        return gameRepository.save(existingGame);
+    }
+
+    public void deleteGame(Integer gameId) {
+        if (!gameRepository.existsById(gameId)) {
+            return;
+        }        
+        gameRepository.deleteById(gameId);
+    }
+
 }

@@ -1,8 +1,9 @@
-package com.first_spring_boot.first_spring_boot.models;
+package com.first_spring_boot.models;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
+import java.util.Date;
 
 @Entity
 public class Library {
