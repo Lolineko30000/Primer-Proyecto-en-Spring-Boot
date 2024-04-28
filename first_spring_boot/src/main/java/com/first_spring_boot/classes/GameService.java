@@ -1,9 +1,7 @@
-package com.first_spring_boot.services;
+package com.first_spring_boot.classes;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import com.first_spring_boot.repositories.GameRepository;
-import com.first_spring_boot.models.Game;
 import java.util.List;
 
 
@@ -27,7 +25,7 @@ public class GameService {
         if (!gameRepository.existsById(gameId)) {
             return null;
         }
-        Game existingGame = gameRepository.getOne(gameId);
+        Game existingGame = gameRepository.getReferenceById(gameId);
         return gameRepository.save(existingGame);
     }
 

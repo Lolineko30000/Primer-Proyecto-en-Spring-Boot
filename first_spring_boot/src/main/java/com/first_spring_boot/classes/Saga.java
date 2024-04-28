@@ -1,4 +1,4 @@
-package com.first_spring_boot.models;
+package com.first_spring_boot.classes;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;

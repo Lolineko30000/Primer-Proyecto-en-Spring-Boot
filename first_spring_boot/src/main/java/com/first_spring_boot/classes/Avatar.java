@@ -1,15 +1,14 @@
-package com.first_spring_boot.models;
+package com.first_spring_boot.classes;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 
 @Entity
-public class Review {
+public class Avatar {
     @Id
     public Integer gameId;
     @ManyToOne
     public User user;
-    public String description;
+    public String name;
 }
-
