@@ -8,7 +8,7 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 @SpringBootApplication
 @EntityScan("com.first_spring_boot.classes.*")   
 @EnableJpaRepositories("com.first_spring_boot.classes.*")
-@ComponentScan(basePackages = {"com.first_spring_boot.classes.*"})
+@ComponentScan(basePackages = {"com.first_spring_boot.classes.GameServiceController.clas	s"})
 public class FirstSpringBootApplication {
 
 	public static void main(String[] args) {
@@ -16,3 +16,4 @@ public class FirstSpringBootApplication {
 	}
 
 }
+	
