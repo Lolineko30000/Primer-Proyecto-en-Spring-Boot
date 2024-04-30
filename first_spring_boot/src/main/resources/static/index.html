@@ -20,7 +20,7 @@
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
 
-        
+
     <link rel="stylesheet" href="./css/styles.css">
 </head>
 
@@ -28,11 +28,23 @@
     <div class="jumbotron text-center">
         <h1 class="display-4">Welcome to Retro Arcade!</h1>
         <p class="lead">Get ready for a blast from the past!</p>
-        <a class="btn btn-primary btn-lg" href="#" role="button">Start Playing</a>
     </div>
 
     <div class="container">
+
+        <h2 class="text-center mb-4">Register</h2>
+        <br>
+        <form id="registrationForm" onsubmit="sendConfirmationEmail(); return false;">
+            <div class="mb-3">
+                <label for="registrationEmail" class="form-label">Registration Email:</label>
+                <input type="email" class="form-control" id="registrationEmail" name="registrationEmail" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Start Playing</button>
+        </form>
+
         <div class="row">
+
+
             <div class="col-md-6 offset-md-3">
                 <h2 class="text-center mb-4">Manage Games</h2>
                 <!-- Form to delete a game -->

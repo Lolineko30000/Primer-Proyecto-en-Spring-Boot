@@ -47,3 +47,27 @@ function addNewGame(newGame) {
     })
     .catch(error => console.error('Error:', error));
 }
+
+
+//Email
+/*=================================================*/ 
+/*=================================================*/ 
+/*=================================================*/ 
+
+function sendConfirmationEmail() {
+    var email = document.getElementById('registrationEmail').value;
+
+    // Make AJAX request to send confirmation email
+    $.ajax({
+        type: 'POST',
+        url: '/send-confirmation-email',
+        contentType: 'application/json',
+        data: JSON.stringify({ email: email }),
+        success: function(response) {
+            alert('Confirmation email sent successfully!');
+        },
+        error: function(xhr, status, error) {
+            alert('Error sending confirmation email: ' + error);
+        }
+    });
+}
